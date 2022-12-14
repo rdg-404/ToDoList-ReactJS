@@ -1,12 +1,17 @@
 :root {
     --white: #fff;
     --gray-700: #0D0D0D;
+    --gray-300: #808080;
     --gray-500: #262626;
+    --gray-800: #1A1A1A;
     --green-500: #22c55e;
     --green-800: #166534;
+
 }
 
 body{
     margin: 0;
     padding: 0;
+    background: var(--gray-500);
+    font-family: 'Inter', sans-serif;
 }
