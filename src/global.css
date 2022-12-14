@@ -1,0 +1,12 @@
+:root {
+    --white: #fff;
+    --gray-700: #0D0D0D;
+    --gray-500: #262626;
+    --green-500: #22c55e;
+    --green-800: #166534;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
