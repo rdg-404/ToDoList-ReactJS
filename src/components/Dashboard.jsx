@@ -1,11 +1,16 @@
 import styles from './Dashboard.module.css'
 import Clipboard from '../assets/Clipboard.png'
+import { Plus } from 'phosphor-react'
 
 
 export function Dashboard (){
     return(
         <>
             <div className={styles.wrapper}>
+                <div className={styles.input}>
+                    <input className={styles.inputMsg} type="text" placeholder='Adicione uma nova tarefa'/>
+                    <button className={styles.inputButton}>Criar <Plus/></button>
+                </div>
                 <span className={styles.clipboard}>
                     <img src={Clipboard} alt="Clipboard" />
                 </span>
