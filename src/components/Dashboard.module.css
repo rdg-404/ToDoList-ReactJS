@@ -96,3 +96,36 @@
 .doneTasks {
     color: var(--green-500)
 }
+
+
+
+.taskList {
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+    background: var(--gray-800);
+    padding: 1rem;
+    width: 50rem;
+    height: 5rem;
+    margin: 3rem auto;
+    border-radius: .5rem;
+
+}
+
+.trashIcon:hover{
+    color: red;
+    cursor: pointer;
+}
+
+
+.checkIcon:hover{
+    color: var(--green-500);
+    cursor: pointer;
+}
+
+
+
+

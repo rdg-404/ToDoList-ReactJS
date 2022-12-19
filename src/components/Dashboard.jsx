@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Dashboard.module.css'
 import Clipboard from '../assets/Clipboard.png'
-import { Plus } from 'phosphor-react'
+import { Plus, RadioButton, Trash } from 'phosphor-react'
 import { useState } from 'react'
 
 
@@ -12,7 +12,14 @@ export function Dashboard (){
     const [input, setInput] = useState('')
 
     function handleAddNewTask(){
+
+        event.preventDefault()
+
         setTasks([...tasks, input])
+
+        setInput('')
+
+
     }
 
     return(
@@ -21,6 +28,7 @@ export function Dashboard (){
 
                 <div className={styles.input}>
                     <input 
+                        maxLength="50"
                         onChange={e => setInput(e.target.value)}
                         value={input}
                         className={styles.inputMsg} 
@@ -42,15 +50,27 @@ export function Dashboard (){
                     <p className={styles.doneTasks}>Concluidas</p>
                 </div>
 
-                
-                {tasks.map(task => {
-                    return (
-                        <span>{task}<br/></span>
-                    )
-                  
-                })}
+                    {tasks.map(task => {
+                        return (
+                            
+                            <div className={styles.taskList}>
+                                <RadioButton 
+                                    size={20}
+                                    className={styles.checkIcon}
+                                />
+                                <span className={styles.taskItem}>
+                                    {task}
+                                </span>
+                                <Trash 
+                                    className={styles.trashIcon}
+                                    size={20}
+                                />
+                            </div>
+                        )
+                    
+                    })}
 
-                <span className={styles.clipboard}>
+                {/* <span className={styles.clipboard}>
                     <img src={Clipboard} alt="Clipboard" />
                 </span>
                 <div className={styles.msg}>
@@ -59,8 +79,8 @@ export function Dashboard (){
                     </h2>
                     <h2 className={styles.msg02}>
                         Crie tarefas e organize seus itens a fazer
-                    </h2>
-                </div>
+                    </h2> */}
+                {/* </div> */}
            
             </div>
          
