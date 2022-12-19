@@ -7,10 +7,19 @@ export function Dashboard (){
     return(
         <>
             <div className={styles.wrapper}>
+
                 <div className={styles.input}>
                     <input className={styles.inputMsg} type="text" placeholder='Adicione uma nova tarefa'/>
                     <button className={styles.inputButton}>Criar <Plus/></button>
                 </div>
+
+
+                <div className={styles.tasksCount}>
+                    <p className={styles.newTasks}>Tarefas criadas</p>
+                    <p className={styles.doneTasks}>Concluidas</p>
+                </div>
+
+                
                 <span className={styles.clipboard}>
                     <img src={Clipboard} alt="Clipboard" />
                 </span>
@@ -21,9 +30,9 @@ export function Dashboard (){
                     <h2 className={styles.msg02}>
                         Crie tarefas e organize seus itens a fazer
                     </h2>
-            </div>
+                </div>
            
-        </div>
+            </div>
          
 
 

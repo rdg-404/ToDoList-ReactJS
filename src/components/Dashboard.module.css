@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 8rem;
 }
 
 
@@ -63,6 +64,7 @@
     border-radius: .4rem;
     background: var(--green-500);
     cursor: pointer;
+    gap: .3rem;
     
 }
 
@@ -77,4 +79,20 @@
     bottom: 1rem;
     gap: .5rem;
 
+}
+
+
+
+.tasksCount{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.newTasks{
+    color: var(--gray-300)
+}
+
+.doneTasks {
+    color: var(--green-500)
 }
