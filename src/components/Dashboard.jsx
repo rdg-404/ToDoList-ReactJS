@@ -11,6 +11,9 @@ export function Dashboard (){
 
     const [input, setInput] = useState('')
 
+
+    
+
     function handleAddNewTask(){
 
         event.preventDefault()
@@ -21,6 +24,21 @@ export function Dashboard (){
 
 
     }
+
+
+    function handleDeleteTask(i){
+
+        console.log(i)
+        const newList = tasks.filter(task => {
+            return task !== i;
+        })
+
+        
+        setTasks(newList)
+        
+    }
+
+    
 
     return(
         <div>
@@ -50,21 +68,28 @@ export function Dashboard (){
                     <p className={styles.doneTasks}>Concluidas</p>
                 </div>
 
-                    {tasks.map(task => {
+                    {tasks.map((task, i) => {
                         return (
                             
-                            <div className={styles.taskList}>
+                            <div key={i} className={styles.taskList}>
                                 <RadioButton 
                                     size={20}
                                     className={styles.checkIcon}
                                 />
-                                <span className={styles.taskItem}>
+                                <span 
+                                    
+                                    className={styles.taskItem}>
                                     {task}
                                 </span>
-                                <Trash 
-                                    className={styles.trashIcon}
-                                    size={20}
-                                />
+
+                                <button 
+                                    type='button'   
+                                    onClick={() => handleDeleteTask(i)}
+                                    className={styles.trashIcon}>
+                                    <Trash 
+                                        size={20}
+                                    />
+                                </button>
                             </div>
                         )
                     

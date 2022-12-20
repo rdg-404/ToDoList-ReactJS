@@ -116,6 +116,12 @@
 
 }
 
+.trashIcon{
+    background: none;
+    color: var(--white);
+    border: none;
+}
+
 .trashIcon:hover{
     color: red;
     cursor: pointer;
