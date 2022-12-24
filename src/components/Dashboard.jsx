@@ -29,8 +29,8 @@ export function Dashboard (){
     function handleDeleteTask(i){
 
         console.log(i)
-        const newList = tasks.filter(task => {
-            return task !== i;
+        const newList = tasks.filter((task, index) => {
+            return index !== i;
         })
 
         
@@ -71,18 +71,21 @@ export function Dashboard (){
                     {tasks.map((task, i) => {
                         return (
                             
-                            <div key={i} className={styles.taskList}>
+                            <div 
+                                id={task.id}
+                                key={i} 
+                                className={styles.taskList}>
                                 <RadioButton 
                                     size={20}
                                     className={styles.checkIcon}
                                 />
                                 <span 
-                                    
                                     className={styles.taskItem}>
                                     {task}
                                 </span>
 
                                 <button 
+                                    
                                     type='button'   
                                     onClick={() => handleDeleteTask(i)}
                                     className={styles.trashIcon}>
