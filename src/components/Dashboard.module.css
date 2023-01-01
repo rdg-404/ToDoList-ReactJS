@@ -116,7 +116,7 @@
 
 }
 
-.trashIcon{
+.trashIcon, .checkIcon {
     background: none;
     color: var(--white);
     border: none;
@@ -131,6 +131,11 @@
 .checkIcon:hover{
     color: var(--green-500);
     cursor: pointer;
+}
+
+.checkIcon{
+    background: black;
+    color: var(--green-500);
 }
 
 

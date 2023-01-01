@@ -28,7 +28,7 @@ export function Dashboard (){
 
     function handleDeleteTask(i){
 
-        console.log(i)
+
         const newList = tasks.filter((task, index) => {
             return index !== i;
         })
@@ -37,6 +37,8 @@ export function Dashboard (){
         setTasks(newList)
         
     }
+
+
 
     
 
@@ -75,10 +77,12 @@ export function Dashboard (){
                                 id={task.id}
                                 key={i} 
                                 className={styles.taskList}>
-                                <RadioButton 
-                                    size={20}
-                                    className={styles.checkIcon}
-                                />
+                                    <input 
+                                        type='checkbox' 
+                                        className={styles.checkIcon}
+                                    />
+                          
+                                   
                                 <span 
                                     className={styles.taskItem}>
                                     {task}
